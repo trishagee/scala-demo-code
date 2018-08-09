@@ -3,7 +3,7 @@ class ImplicitConversion {
   {
     implicit val defaultVal: Int = 42
 
-    implicit def stringToInt(s: String): Int = Integer.parseInt(s)
+    implicit def stringToInt(s: String)(implicit more: Int): Int = Integer.parseInt(s)
     val i: Int = "123"
   }
 }
