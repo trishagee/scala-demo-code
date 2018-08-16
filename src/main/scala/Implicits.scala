@@ -5,7 +5,6 @@ object Implicits {
     implicit def bFromC(implicit c: C): B = new B
 
     implicit val someC: C = new C
-    implicit val anotherC: C = new C
     implicit val someD: D = new D
 
     def materializeB(implicit a: A, d: D): B = new B
